@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+<config
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:ObjectManager/etc/config.xsd'
+>
+<!-- 2020-05-17
+"Implement a custom design for the `post/list.phtml` template":
+https://github.com/tradefurniturecompany/blog/issues/1 -->
+	<type name='FishPig\WordPress\Block\Post\ListPost'>
+		<plugin name='TFC\Blog\Plugin\Block\Post\ListPost' type='TFC\Blog\Plugin\Block\Post\ListPost'/>
+	</type>
+</config>
