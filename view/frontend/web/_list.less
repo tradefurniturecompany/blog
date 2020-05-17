@@ -2,11 +2,14 @@
 // 1) "Implement a custom design for the `post/list.phtml` template":
 // https://github.com/tradefurniturecompany/blog/issues/1
 .wordpress-homepage-view {
-	.post-list-description {margin-bottom: 0;}
+	.post-list-description {font-style: italic; margin-bottom: 0;}
 	.post-list.grid li {
 		display: list-item;
 		margin-right: initial;
 		vertical-align: initial;
 		width: auto;
+	}
+	@media only screen and (max-width: 767px) {
+		.post-list-description {font-size: 1.6rem;}
 	}
 }
