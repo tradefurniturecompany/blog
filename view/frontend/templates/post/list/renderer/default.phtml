@@ -7,7 +7,7 @@
  * https://github.com/bentideswell/magento2-wordpress-integration/blob/1.3.0.24/view/frontend/templates/post/list/renderer/default.phtml
  */
 ?>
-<?php if ($post = $this->getPost()): ?>
+<?php if ($post = $this->getPost()) { ?>
 	<div class='post-list-item'>
 		<h2>
 			<a href='<?= $post->getUrl() ?>' title='<?= $this->escapeHtml($post->getName()) ?>'>
@@ -16,12 +16,12 @@
 		</h2>
 		<div class='post-date post-meta-item'><?= $post->getPostDate() ?></div>
 		<div class='post-entry'>
-			<?php if ($image = $post->getImage()): ?>
+			<?php if ($image = $post->getImage()) { ?>
 				<div class='post-image'>
 					<a href='<?= $post->getUrl() ?>' title='<?= $this->escapeHtml($post->getName()) ?>'><img src='<?= $image->getAvailableImage() ?>' alt='<?= $this->escapeHtml($post->getName()) ?>'/></a>
 				</div>
-			<?php endif; ?>
+			<?php } ?>
 			<div class='post-excerpt'><?= $post->getExcerpt(60) ?></div>
 		</div>
 	</div>
-<?php endif; ?>
+<?php } ?>
