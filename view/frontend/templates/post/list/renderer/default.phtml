@@ -8,20 +8,20 @@
  */
 ?>
 <?php if ($post = $this->getPost()): ?>
-	<div class="post-list-item">
+	<div class='post-list-item'>
 		<h2>
-			<a href="<?= $post->getUrl() ?>" title="<?= $this->escapeHtml($post->getName()) ?>">
+			<a href='<?= $post->getUrl() ?>' title='<?= $this->escapeHtml($post->getName()) ?>'>
 				<?= $this->escapeHtml($post->getName()) ?>
 			</a>
 		</h2>
-		<div class="post-date post-meta-item"><?= $post->getPostDate() ?></div>
-		<div class="post-entry">
+		<div class='post-date post-meta-item'><?= $post->getPostDate() ?></div>
+		<div class='post-entry'>
 			<?php if ($image = $post->getImage()): ?>
-				<div class="post-image">
-					<a href="<?= $post->getUrl() ?>" title="<?= $this->escapeHtml($post->getName()) ?>"><img src="<?= $image->getAvailableImage() ?>" alt="<?= $this->escapeHtml($post->getName()) ?>"/></a>
+				<div class='post-image'>
+					<a href='<?= $post->getUrl() ?>' title='<?= $this->escapeHtml($post->getName()) ?>'><img src='<?= $image->getAvailableImage() ?>' alt='<?= $this->escapeHtml($post->getName()) ?>'/></a>
 				</div>
 			<?php endif; ?>
-			<div class="post-excerpt"><?= $post->getExcerpt(60) ?></div>
+			<div class='post-excerpt'><?= $post->getExcerpt(60) ?></div>
 		</div>
 	</div>
 <?php endif; ?>
