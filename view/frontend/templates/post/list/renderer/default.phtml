@@ -10,35 +10,18 @@
 <?php if ($post = $this->getPost()): ?>
 	<div class="post-list-item">
 		<h2>
-			<a href="<?php echo $post->getUrl() ?>" title="<?php echo $this->escapeHtml($post->getName()) ?>">
-				<?php echo $this->escapeHtml($post->getName()) ?>
+			<a href="<?= $post->getUrl() ?>" title="<?= $this->escapeHtml($post->getName()) ?>">
+				<?= $this->escapeHtml($post->getName()) ?>
 			</a>
 		</h2>
+		<div class="post-date post-meta-item"><?= $post->getPostDate() ?></div>
 		<div class="post-entry">
 			<?php if ($image = $post->getImage()): ?>
 				<div class="post-image">
-					<a href="<?php echo $post->getUrl() ?>" title="<?php echo $this->escapeHtml($post->getName()) ?>"><img src="<?php echo $image->getAvailableImage() ?>" alt="<?php echo $this->escapeHtml($post->getName()) ?>"/></a>
+					<a href="<?= $post->getUrl() ?>" title="<?= $this->escapeHtml($post->getName()) ?>"><img src="<?= $image->getAvailableImage() ?>" alt="<?= $this->escapeHtml($post->getName()) ?>"/></a>
 				</div>
 			<?php endif; ?>
-			<div class="post-excerpt"><?php echo $post->getExcerpt(60) ?></div>
-		</div>
-		<div class="post-meta">
-			<?php if ($categoryString = $post->getTermCollectionAsString('category')): ?>
-				<div class="post-categories post-meta-item">
-					<strong><?php echo __('Categories') ?>:</strong> <?php echo $categoryString ?>
-				</div>
-			<?php endif; ?>
-			<?php if ($tagString = $post->getTermCollectionAsString('post_tag')): ?>
-				<div class="post-tags post-meta-item">
-					<strong><?php echo __('Tags') ?>:</strong> <?php echo $tagString ?>
-				</div>
-			<?php endif; ?>
-			<div class="post-date post-meta-item">
-				<strong><?php echo __('Posted On') ?>:</strong> <?php echo $post->getPostDate() ?>
-			</div>
-			<div class="post-user post-meta-item">
-				<strong><?php echo __('Posted By') ?>:</strong> <a href="<?php echo $post->getUser()->getUrl() ?>"><?php echo $post->getUser() ->getDisplayName() ?></a>
-			</div>
+			<div class="post-excerpt"><?= $post->getExcerpt(60) ?></div>
 		</div>
 	</div>
 <?php endif; ?>
