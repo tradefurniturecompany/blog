@@ -1,4 +1,4 @@
-<?php if ($post = $this->getPost()): ?>
+<?php if ($post = $this->getPost()) { ?>
 	<div class='post-view'>
 		<div class='post-date post-meta-item'><?= $post->getPostDate() ?></div>
 		<div class='post-entry'>
@@ -16,9 +16,9 @@
 					<a href='<?= $post->getUrl() ?>' title='<?= $this->escapeHtml($post->getPostTitle()) ?>'><img src='<?= $imageUrl ?>' alt='<?= $this->escapeHtml($post->getPostTitle()) ?>'/></a>
 				</div>
 			<?php } ?>
-			<?php if (($content = trim($post->getContent())) !== ''): ?>
+			<?php if (($content = trim($post->getContent())) !== '') { ?>
 				<div class='post-content'><?= $content ?></div>
-			<?php endif; ?>
+			<?php } ?>
 		</div>
 	</div>
-<?php endif; ?>
+<?php } ?>
