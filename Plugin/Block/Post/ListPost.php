@@ -1,9 +1,9 @@
 <?php
 namespace TFC\Blog\Plugin\Block\Post;
 use FishPig\WordPress\Block\Post\ListPost as Sb;
-// 2020-05-17
-// "Implement a custom design for the `post/list.phtml` template":
-// https://github.com/tradefurniturecompany/blog/issues/1
+# 2020-05-17
+# "Implement a custom design for the `post/list.phtml` template":
+# https://github.com/tradefurniturecompany/blog/issues/1
 final class ListPost {
 	/**
 	 * 2020-05-17
