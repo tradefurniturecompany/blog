@@ -10,9 +10,6 @@ final class ListPost {
 	 * @see \FishPig\WordPress\Block\Post\ListPost::getCustomBlogThemeVendor():
 	 *		function getCustomBlogThemeVendor() {return false;}
 	 * https://github.com/bentideswell/magento2-wordpress-integration/blob/2.0.11.19/Block/Post/ListPost.php#L120-L123
-	 * @param Sb $sb
-	 * @param string $r
-	 * @return string
 	 */
-	function afterGetCustomBlogThemeVendor(Sb $sb, $r) {return df_module_name($this);}
+	function afterGetCustomBlogThemeVendor(Sb $sb, string $r):string {return df_module_name($this);}
 }
